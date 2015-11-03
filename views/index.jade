@@ -1,0 +1,38 @@
+extends layout
+block content
+    h1= title
+    // Wrapper
+    #wrapper
+        // USER INFO
+        #userInfo
+            h2 User Info
+            p
+                strong Name:
+                |  <span id='userInfoName'></span>
+                br
+                strong Email:
+                |  <span id='userInfoEmail'></span>
+                br
+                strong Count:
+                |  <span id='userInfoCount'></span>
+        // /USER INFO
+        // USER LIST
+        #userList
+            h2 User List
+            table
+                thead
+                    th UserName
+                    th Delete?
+                tbody
+        // /USER LIST
+        // ADD USER
+        #addUser
+            h2 Add User
+            fieldset
+                input#inputUserName(type='text', placeholder='Username')
+                input#inputUserEmail(type='text', placeholder='Email')
+                input#inputUserCount(type='text', placeholder='Count')
+                br
+                button#btnAddUser Add User
+        // /ADD USER
+    // /WRAPPER
